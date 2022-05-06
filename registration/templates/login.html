@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Авторизация</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Автроизация</h1>
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Войти">
+</form>
+{% endblock content %}

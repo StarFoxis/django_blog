@@ -1,0 +1,11 @@
+{% block title %}
+<title>Выход</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Вы покидаете нас!?</h1>
+<form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Да">
+</form>
+{% endblock content %}
